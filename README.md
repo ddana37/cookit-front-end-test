@@ -1,13 +1,23 @@
-## Test technique Cook it
+<p align="center">
+  <img src="https://res.cloudinary.com/cookit/image/upload/v1605888231/Logos/Logo-Cookit.svg" width="300" />
+</p>
 
-**Mise en place**
+---
+
+# Test technique Front-end
+
+English version will follow.
+
+
+## Mise en place
 
 - Forkez le repository
 - Clonez sur votre environnement `git clone`
 - roulez `npm i` pour installer les modules node
 - roulez `npm start` pour démarrer le projet
 
-**Technologies utilisées**
+
+## Technologies utilisées
 
 - React (https://reactjs.org/)
 - Typescript (https://www.typescriptlang.org/)
@@ -19,9 +29,9 @@
 
 ---
 
-**Test**
+## Test
 
-Pour completer le test vous devez terminer le formulaire d'abonnement selon les critères décrits dans la "User story" suivante:
+Pour compléter le test, vous devez terminer le formulaire d'abonnement selon les critères décrits dans la "User story" suivante:
 
 ETQ utilisateur s'abonnant à Cook it:
 
@@ -46,13 +56,84 @@ ETQ Développeur travaillant sur ce projet après l'implémentation:
 
 ---
 
-API:
+## API:
 
-usage: validation du code postal
+```
+Usage: validation du code postal
 
-url: https://us-central1-interview-zip-code.cloudfunctions.net/zipTest
+URL: https://us-central1-interview-zip-code.cloudfunctions.net/zipTest
 
-method: GET
+Method: GET
+```
+
+Parameters:
+
+| parameter |  type  | required |
+| --------- | :----: | -------: |
+| zip       | string |    false |
+
+Return:
+
+```
+{
+    "is_deliverable": boolean,
+    "has_error": boolean,
+    "error_message": string
+}
+```
+
+---
+
+## Setup
+- Fork the repository
+- Clone it in your environment using `git clone`
+- Run `npm i` to install node modules
+- Run `npm start` to start the project
+
+## Stack used
+- React (https://reactjs.org/)
+- Typescript (https://www.typescriptlang.org/)
+- Axios (Postal Code validation) (https://github.com/axios/axios)
+- Jest (Unit tests) (https://jestjs.io/)
+- Redux (Theme and languuge) (https://redux.js.org/)
+- Styled Components (Styling) (https://styled-components.com/)
+- i18next (Localization) (https://www.i18next.com/)
+
+---
+
+## Test
+
+To complete the test, you must complete the subscription form according to the specifications described in the following "user stories":
+
+As a USER subscribing to Cook it:
+- I expect to fill out my:
+  - Email
+  - Postal code
+- I would like to see an error message if my email is in an invalid format
+- I would like to see an error message if my postal code is in an invalid format
+- I would like to see an error message if my postal code isn't in a deliverable zone (API: `https://us-central1-interview-zip-code.cloudfunctions.net/zipTest`)
+- I would like to be able to submit my information and to be redirected to a confirmation page
+- I would like to see my submitted information in the confirmation page
+
+As a CODE REVIEWER:
+- **I would like to see a comprehensible Pull Request with the changes made**
+
+As a DEVELOPER WORKING ON THIS PROJECT AFTER MY IMPLEMENTATION:
+- I would like to be able to run unit tests (`npm run test`) to see if my changes have caused any regressions
+
+### Note: It's important to make a Pull Request so that we are able to identify your changes easily.
+
+---
+
+## API:
+
+```
+Usage: Postal Code Validation
+
+URL: https://us-central1-interview-zip-code.cloudfunctions.net/zipTest
+
+Method: GET
+```
 
 Parameters:
 
