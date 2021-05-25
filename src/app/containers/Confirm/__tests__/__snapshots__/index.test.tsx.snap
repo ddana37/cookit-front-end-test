@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Confirm /> should render and match the snapshot 1`] = `
+<React.Fragment>
+  <Helmet
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title />
+    <meta
+      content=""
+      name="description"
+    />
+  </Helmet>
+  <NavBar />
+  <Confirm__Wrapper>
+    <h1>
+      Confirm subscription
+    </h1>
+    <h2>
+      Email:
+    </h2>
+    <h2>
+      Postal code:
+    </h2>
+    <Confirm__ButtonWrapper>
+       <Button>
+          Yes
+       </Button>
+       <Button>
+          No
+       </Button>
+      </Confirm__ButtonWrapper>
+  </Confirm__Wrapper>
+</React.Fragment>
+`;
